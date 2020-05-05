@@ -1,0 +1,55 @@
+{
+  "name": "ts-test-0427",
+  "version": "1.0.0",
+  "description": "A ts test repo",
+  "main": "dist/index.js",
+  "types": "dist/index.d.js",
+  "scripts": {
+    "build": "webpack",
+    "lint": "eslint 'src/**/*.{js,ts}'",
+    "lint-fix": "eslint --fix 'src/**/*.{js,ts}'",
+    "prettier": "prettier .prettierrc.js --write",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wangfupeng1988/ts-test-0427.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wangfupeng1988/ts-test-0427/issues"
+  },
+  "homepage": "https://github.com/wangfupeng1988/ts-test-0427#readme",
+  "devDependencies": {
+    "@types/lodash": "^4.14.150",
+    "@typescript-eslint/eslint-plugin": "^2.31.0",
+    "@typescript-eslint/parser": "^2.31.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.2",
+    "prettier": "^2.0.5",
+    "ts-loader": "^7.0.2",
+    "typescript": "^3.8.3",
+    "webpack": "^4.43.0",
+    "webpack-cli": "^3.3.11"
+  },
+  "dependencies": {
+    "lodash": "^4.17.15"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.{ts,js}": [
+      "npm run lint-fix",
+      "prettier .prettierrc.js --write",
+      "git add"
+    ]
+  }
+}
