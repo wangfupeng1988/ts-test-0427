@@ -4,6 +4,7 @@ module.exports = {
         es6: true,
         mocha: true,
         jest: true,
+        node: true,
     },
     extends: [
         'eslint:recommended',
