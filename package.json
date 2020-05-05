@@ -8,7 +8,7 @@
     "build": "webpack",
     "lint": "eslint 'src/**/*.{js,ts}'",
     "lint-fix": "eslint --fix 'src/**/*.{js,ts}'",
-    "prettier": "prettier .prettierrc.js --write",
+    "prettier": "prettier --write --config .prettierrc.js 'src/**/*.{js,ts}'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -48,7 +48,7 @@
   "lint-staged": {
     "*.{ts,js}": [
       "npm run lint-fix",
-      "prettier .prettierrc.js --write",
+      "npm run prettier",
       "git add"
     ]
   }
