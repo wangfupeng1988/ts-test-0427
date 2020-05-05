@@ -9,7 +9,11 @@
     "lint": "eslint 'src/**/*.{js,ts}'",
     "lint-fix": "eslint --fix 'src/**/*.{js,ts}'",
     "prettier": "prettier --write --config .prettierrc.js 'src/**/*.{js,ts}'",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "test-c": "jest --coverage"
+  },
+  "jest": {
+    "testEnvironment": "node"
   },
   "repository": {
     "type": "git",
@@ -23,6 +27,7 @@
   },
   "homepage": "https://github.com/wangfupeng1988/ts-test-0427#readme",
   "devDependencies": {
+    "@types/jest": "^25.2.1",
     "@types/lodash": "^4.14.150",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
@@ -30,8 +35,10 @@
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
     "husky": "^4.2.5",
+    "jest": "^26.0.0",
     "lint-staged": "^10.2.2",
     "prettier": "^2.0.5",
+    "ts-jest": "^25.4.0",
     "ts-loader": "^7.0.2",
     "typescript": "^3.8.3",
     "webpack": "^4.43.0",
@@ -47,8 +54,9 @@
   },
   "lint-staged": {
     "*.{ts,js}": [
-      "npm run lint-fix",
       "npm run prettier",
+      "npm run lint-fix",
+      "npm run test",
       "git add"
     ]
   }
