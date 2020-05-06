@@ -6,13 +6,13 @@
   "types": "dist/tsTest.d.js",
   "module": "src/tsTest.js",
   "scripts": {
-    "dev": "webpack-dev-server --config build/webpack.dev.js",
-    "build": "webpack --config build/webpack.prod.js",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js",
     "lint": "eslint 'src/**/*.{js,ts}'",
     "lint-fix": "eslint --fix 'src/**/*.{js,ts}'",
     "prettier": "prettier --write --config .prettierrc.js 'src/**/*.{js,ts}'",
-    "test": "jest --passWithNoTests",
-    "test-c": "jest --coverage"
+    "test": "cross-env NODE_ENV=test jest --passWithNoTests",
+    "test-c": "cross-env NODE_ENV=test jest --coverage"
   },
   "jest": {
     "testEnvironment": "node"
@@ -33,6 +33,7 @@
     "@types/lodash": "^4.14.150",
     "@typescript-eslint/eslint-plugin": "^2.31.0",
     "@typescript-eslint/parser": "^2.31.0",
+    "cross-env": "^7.0.2",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.3",
