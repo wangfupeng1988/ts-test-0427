@@ -18,12 +18,24 @@ module.exports = {
                 test: /\.less$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'less-loader'],
             },
+            {
+                test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 500 * 1024, // <=500kb 则使用 base64 （即，希望字体文件一直使用 base64 ，而不单独打包）
+                        },
+                    },
+                ],
+            },
         ],
     },
     resolve: {
         extensions: ['.ts', '.js', '.json', '.less', '.css'],
         alias: {
-            '~': srcPath,
+            // utils: path.join(srcPath, 'utils'),
+            // style: path.join(srcPath, 'assets', 'style'),
         },
     },
 }

@@ -1,7 +1,8 @@
 // import { cloneDeep } from 'lodash'
-import fn1, { fn2 } from '~/utils/u'
+import fn1, { fn2 } from './utils/u'
 
-import '~/style/a.less'
+import './assets/style/a.less'
+import './assets/style/icon.less'
 
 const a = 'hello world'
 console.log(a)
