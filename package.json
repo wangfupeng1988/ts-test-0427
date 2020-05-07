@@ -1,10 +1,10 @@
 {
   "name": "ts-test-0427",
-  "version": "1.0.0",
+  "version": "0.0.2",
   "description": "A ts test repo",
-  "main": "dist/tsTest.js",
-  "types": "dist/tsTest.d.js",
-  "module": "src/tsTest.js",
+  "main": "dist/ts-test.js",
+  "types": "dist/ts-test.d.ts",
+  "module": "src/ts-test.ts",
   "scripts": {
     "dev": "cross-env NODE_ENV=development webpack-dev-server --config build/webpack.dev.js",
     "build": "cross-env NODE_ENV=production webpack --config build/webpack.prod.js",
