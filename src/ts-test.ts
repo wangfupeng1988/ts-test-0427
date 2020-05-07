@@ -1,5 +1,7 @@
-import { cloneDeep } from 'lodash'
-import fn1, { fn2 } from './utils/u'
+// import { cloneDeep } from 'lodash'
+import fn1, { fn2 } from '~/utils/u'
+
+import '~/style/a.less'
 
 const a = 'hello world'
 console.log(a)
@@ -13,6 +15,6 @@ interface SomeObj {
 }
 
 const obj: SomeObj = { x: 100 }
-console.log(cloneDeep(obj))
+// console.log(cloneDeep(obj))
 
 export { a, n, obj }
