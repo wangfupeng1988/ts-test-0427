@@ -2,9 +2,9 @@
 
 git clone ，之后及时要改 git config user.name 和 email
 
-git commit 规范
+单元测试，开发文档的规范
 
-git 分支规范
+git commit 规范，git 分支规范
 
 持续集成的过程 https://travis-ci.org/wangfupeng1988/ts-test-0427
 
