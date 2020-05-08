@@ -1,6 +1,6 @@
 {
   "name": "ts-test-0427",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A ts test repo",
   "main": "dist/ts-test.js",
   "types": "dist/ts-test.d.ts",
