@@ -19,8 +19,18 @@
 
 ## 合并代码
 
-代码走查没问题的话，就合并 PR 到 dev 。然后查看 travis 是否执行成功。
+代码走查没问题的话，就合并 PR 到 dev 。
+
+全部合并完成之后，查看 [travis](https://travis-ci.org/wangfupeng1988/ts-test-0427) 是否执行成功。
 
 ## 回归测试
 
 （如何自动部署一个测试环境？？？）
+
+## 发布到 npm
+
+将 dev 代码合并到 master
+
+升级版本，使用 `npm version major|minor|patch` （会自动 commit 并且打 tag ，需要手动 push 到远程）
+
+master 远程代码有改动，自动触发 travis 流程，发布到 npm
